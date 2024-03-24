@@ -5,6 +5,7 @@ pandas
 numpy
 ensure
 python-dotenv
+typing
 
 
 # dev requirements -
