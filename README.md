@@ -1,53 +1,48 @@
-# PyMongo Atlas Connector: Seamless MongoDB Integration
+# requirements_dev.txt we use for the testing
+It makes it easier to install and manage dependencies for development and testing, separate from the dependencies required for production.
 
-PyMongo Atlas Connector is a Python package designed to streamline the process of connecting to MongoDB Atlas, providing seamless integration for database automation tasks. With this package, developers can effortlessly establish connections to MongoDB Atlas databases, simplifying the management and utilization of MongoDB resources within their Python applications.
+# difference between requirements_dev.txt and requirements.txt
 
-## Features
-- **Effortless Connection**: Quickly establish connections to MongoDB Atlas clusters without hassle.
-- **Flexible Configuration**: Customize connection settings to suit your specific project requirements.
-- **Seamless Integration**: Integrate MongoDB Atlas connectivity seamlessly into your Python applications.
-- **Robust Error Handling**: Handle connection errors gracefully with built-in error handling mechanisms.
-- **Enhanced Automation**: Enable automation of database management tasks for improved efficiency.
+requirements.txt is used to specify the dependencies required to run the production code of a Python project, while requirements_dev.txt is used to specify the dependencies required for development and testing purposes.
 
-## Installation
+# tox.ini
+We use if for the testing in the python package testing against different version of the python 
 
-```
-pip install databaseconnection
-```
+## how tox works tox enviornment creation
+1. Install depedencies and packages 
+2. Run commands
+3. Its a combination of the (virtualenvwrapper and makefile)
+4. It creates a .tox
 
-## Dependencies
 
-- pymongo
-- dnspython
-- pandas
-- numpy
-- ensure
+# pyproject.toml
+it is being used for configuration the python project it is a alternative of the setup.cfg file. its containts configuration related to the build system
+such as the build tool used package name version author license and dependencies
 
-## Development Requirements
+# setup.cfg
+In summary, setup.cfg is used by setuptools to configure the packaging and installation of a Python projec
 
-- pytest==7.1.3
-- tox==3.25.1
-- black==22.8.0
-- flake8==5.0.4
-- mypy==0.971
+# Testing python application
+*types of testing*
+1. Automated testing 
+2. Manual testing
 
-## Usage
+*Mode of testing*
+1. Unit testing
+2. Integration tests
 
-```
-import databaseautomationconnection
+*Testing frameworks*
 
-# Example usage code here...
-```
+1. pytest
+2. unittest
+3. robotframework
+4. selenium
+5. behave
+6. doctest
 
-For more information, please visit the [GitHub repository](https://github.com/DeependraVerma/PyMongo-Atlas-Connector-Seamless-MongoDB-Integration).
+# check with the code style formatting and syntax(coding standard)
 
-## Contributing
+1. pylint
+2. flake8(it is best because it containt 3 library pylint pycodestyle mccabe)
+3. pycodestyle
 
-Contributions are welcome! Please check the [contribution guidelines](https://github.com/DeependraVerma/PyMongo-Atlas-Connector-Seamless-MongoDB-Integration/blob/main/CONTRIBUTING.md) before making any changes.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/DeependraVerma/PyMongo-Atlas-Connector-Seamless-MongoDB-Integration/blob/main/LICENSE) file for details.
-```
-
-Feel free to copy and paste this code into your README.md file for your PyPI package. Adjustments can be made as necessary.
