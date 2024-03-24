@@ -15,7 +15,7 @@ def get_requirements(file_path:str)-> List[str]:
             requirements.remove(HYPEN_E_DOT)
     return requirements
 
-__version__ = "0.0.9"
+__version__ = "0.0.10"
 REPO_NAME = "PyMongo-Atlas-Connector-Seamless-MongoDB-Integration"
 PKG_NAME= "databaseconnectionmongo"
 AUTHOR_USER_NAME = "DeependraVerma"
@@ -35,4 +35,5 @@ setup(
     },
     package_dir={"": "src"},
     packages=find_packages(where="src"),
+    install_requires = ["pymongo", "pymongo[srv]", "dnspython", "pandas", "numpy", "ensure", "python-dotenv", "typing"]
     )
