@@ -1,15 +1,19 @@
 from setuptools import setup, find_packages
+from typing import List
 
 with open('README.md', 'r', encoding='utf-8') as f:
-    long_description = f.read()
+    long_description = f.read()     
 
-def get_requirements(file_path):
-    with open(file_path) as f:
-        return f.read().splitlines()
+def get_requirements(file_path:str) -> List[str]:
+    requirements = []
+    with open(file_path) as file_obj:
+        requirements = file_obj.readlines()
+        requirements = [req.strip() for req in requirements]
+    return requirements
 
 __version__ = "0.0.4"
 REPO_NAME = "PyMongo-Atlas-Connector-Seamless-MongoDB-Integration"
-PKG_NAME = "databaseconnection"
+PKG_NAME= "databaseconnection"
 AUTHOR_USER_NAME = "DeependraVerma"
 AUTHOR_EMAIL = "deependra.verma00@gmail.com"
 
@@ -27,9 +31,10 @@ setup(
     },
     package_dir={"": "src"},
     packages=find_packages(where="src"),
-    install_requires=get_requirements("requirements.txt"),
+    install_requires=get_requirements("./requirements.txt"),
     extras_require={
-        'dev': get_requirements("requirements_dev.txt")
+        'dev': get_requirements("./requirements_dev.txt")
     },
     include_package_data=True,
+    package_data={"": ["requirements_dev.txt"]},  # Ensure requirements_dev.txt is included
 )
