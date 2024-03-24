@@ -17,7 +17,7 @@ def get_requirements(file_path:str)-> List[str]:
 
 __version__ = "0.0.3"
 REPO_NAME = "PyMongo-Atlas-Connector-Seamless-MongoDB-Integration"
-PKG_NAME= "Database-auto-Connections"
+PKG_NAME= "databaseconnection"
 AUTHOR_USER_NAME = "DeependraVerma"
 AUTHOR_EMAIL = "deependra.verma00@gmail.com"
 
