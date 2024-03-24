@@ -28,13 +28,11 @@ setup(
     author_email=AUTHOR_EMAIL,
     description="A python package for connecting with database.",
     long_description=long_description,
-    long_description_content_type="text/markdown",
+    long_description_content="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
     project_urls={
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
     package_dir={"": "src"},
     packages=find_packages(where="src"),
-    install_requires = get_requirements("\PyMongo-Atlas-Connector-Seamless-MongoDB-Integration\requirements_dev.txt"),
-    include_package_data=True,
     )
