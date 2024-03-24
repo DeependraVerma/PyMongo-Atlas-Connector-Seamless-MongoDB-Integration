@@ -15,9 +15,9 @@ def get_requirements(file_path:str)-> List[str]:
             requirements.remove(HYPEN_E_DOT)
     return requirements
 
-__version__ = "0.0.8"
+__version__ = "0.0.9"
 REPO_NAME = "PyMongo-Atlas-Connector-Seamless-MongoDB-Integration"
-PKG_NAME= "databaseconnection"
+PKG_NAME= "databaseconnectionmongo"
 AUTHOR_USER_NAME = "DeependraVerma"
 AUTHOR_EMAIL = "deependra.verma00@gmail.com"
 
