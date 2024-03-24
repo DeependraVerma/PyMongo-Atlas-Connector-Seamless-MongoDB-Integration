@@ -11,8 +11,8 @@ PyMongo Atlas Connector is a Python package designed to streamline the process o
 
 ## Installation
 
-```bash
-pip install databaseautomationconnection
+```
+pip install databaseconnection
 ```
 
 ## Dependencies
@@ -33,7 +33,7 @@ pip install databaseautomationconnection
 
 ## Usage
 
-```python
+```
 import databaseautomationconnection
 
 # Example usage code here...
